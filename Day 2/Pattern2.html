@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pattern2</title>
+    <style>
+       div{
+
+        
+        width:500px;
+        height:350px;
+      background-color: aqua;
+      margin-top: 50px;
+       }
+    </style>
+
+    <script>
+        function Pattern1()
+        {
+            var number=document.getElementById("textnumber").value;
+            var resultstr="";
+            var i,j;
+            for(i=1;i<=number;i++)
+            {
+                for(j=1;j<=i;j++)
+                {
+                  resultstr=resultstr+'*';
+                }
+                 resultstr=resultstr+"<br>";
+    
+            }
+              
+          document.getElementById("result").innerHTML=resultstr;
+        }
+        </script>
+</head>
+<body>
+    <form>
+        <label> Enter Number</label>
+        <input type="text" id="textnumber" placeholder="enter number">
+        <input type="button" value="checknumber" onclick="Pattern1()">
+    </form>
+    <div style="width:500px;height:350px; background-color: aqua;"id="result">
+        Result will go here.
+    </div>
+</body>
+</html>
